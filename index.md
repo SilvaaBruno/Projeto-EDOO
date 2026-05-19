@@ -80,16 +80,37 @@ description: Sistema full-stack para gerenciamento de eventos acadêmicos do Cen
   .btn-pdf { background: #701c1c; color: #fff; }
   .btn-pdf:hover { background: #a02828; text-decoration: none; transform: translateY(-2px); }
 
+  /* ── Video Section ── */
+  .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 45%; 
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   /* ── Sections ── */
   .section { max-width: 1000px; margin: 0 auto; padding: 80px 24px; }
   .section-dark { background: #161b22; border-top: 1px solid #21262d; border-bottom: 1px solid #21262d; }
   .section-title { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
   .section-subtitle { color: #8b949e; margin-bottom: 40px; font-size: 1.1rem; }
 
-  /* ── Screenshots ── */
-  .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  /* ── Screenshots com Zoom Link ── */
+  .screenshot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
   .screenshot-card { background: #0d1117; border: 1px solid #30363d; border-radius: 12px; overflow: hidden; transition: 0.3s; }
-  .screenshot-card:hover { border-color: #58a6ff; }
+  .screenshot-card:hover { border-color: #58a6ff; transform: translateY(-2px); }
+  .screenshot-zoom-link { display: block; width: 100%; cursor: zoom-in; }
   .screenshot-card img { width: 100%; display: block; border-bottom: 1px solid #30363d; }
   .screenshot-label { padding: 15px; font-size: 0.85rem; color: #8b949e; font-weight: 600; text-align: center; }
 
@@ -120,7 +141,7 @@ description: Sistema full-stack para gerenciamento de eventos acadêmicos do Cen
   .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
   .team-card { background: #0d1117; border: 1px solid #30363d; border-radius: 10px; padding: 20px; text-align: center; }
   .team-card strong { display: block; color: #fff; font-size: 1rem; }
-  .team-card span { color: #701c1c; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+  .team-card span { color: #cc3333; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
 
   /* ── Footer ── */
   footer { text-align: center; padding: 60px 24px; color: #8b949e; font-size: 0.9rem; border-top: 1px solid #21262d; }
@@ -131,29 +152,50 @@ description: Sistema full-stack para gerenciamento de eventos acadêmicos do Cen
 </style>
 
 <div class="hero">
-  <img class="hero-logo" src="https://raw.githubusercontent.com/lacavaalex/Projeto-EDOO/main/src/WhatsApp%20Image%202026-05-07%20at%2016.35.57.jpeg" alt="CIn-Events Logo">
+  <img class="hero-logo" src="./assets/WhatsApp Image 2026-05-07 at 16.35.57.jpeg" alt="CIn-Events Logo">
   <div class="hero-badge">CIn / UFPE · EDOO · 2026.1</div>
   <h1>CIn-Events</h1>
   <p class="hero-subtitle">
-    O ecossistema definitivo para gestão de eventos acadêmicos. Robustez <strong>C++ nativa</strong> integrada à experiência reativa do <strong>React.js</strong>.
+    O CIn-Events permite que administradores gerenciem o ciclo de vida de eventos (Palestras, Workshops e Hackathons) e que alunos visualizem oportunidades de forma integrada. Este projeto é um sistema de gestão de eventos acadêmicos desenvolvido para a disciplina de Estrutura de Dados Orientada a Objetos no Centro de Informática da UFPE. O sistema utiliza uma arquitetura Full-stack, integrando um backend robusto em C++ com uma interface Single Page Application (SPA) em React. O objetivo do projeto foi treinar os conceitos do paradigma de Programação Orientada a Objeto aprendidos em sala.
   </p>
   <div class="cta-group">
     <a class="btn btn-primary" href="https://github.com/lacavaalex/Projeto-EDOO">GitHub Repository</a>
-    <a class="btn btn-pdf" href="https://raw.githubusercontent.com/lacavaalex/Projeto-EDOO/main/src/Relat%C3%B3rio%20EDOO%20-%20CInEvents.pdf">Relatório Técnico (PDF)</a>
+    <a class="btn btn-pdf" href="./assets/relatorio.pdf">Relatório Técnico (PDF)</a>
+  </div>
+</div>
+
+<div class="section-dark">
+  <div class="section" style="padding: 40px 24px;">
+    <h2 class="section-title" style="text-align: center;">▶️ Vídeo de Evaluation</h2>
+    <p class="section-subtitle" style="text-align: center;">Apresentação prática das funcionalidades e arquitetura da aplicação.</p>
+    
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/4HrEujCZLQE"
+        title="Vídeo de Avaliação - CIn Events" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 </div>
 
 <div class="section">
   <h2 class="section-title">🖥️ Demonstração Visual</h2>
-  <p class="section-subtitle">Interface administrativa e core de processamento.</p>
+  <p class="section-subtitle">Interface administrativa e core de processamento. Clique na imagem para ampliá-la em tamanho completo.</p>
   
   <div class="screenshot-grid">
     <div class="screenshot-card">
-      <img src="https://raw.githubusercontent.com/lacavaalex/Projeto-EDOO/main/src/Captura%20de%20tela%20de%202026-05-14%2017-42-49.png" alt="Admin Dashboard">
+      <a class="screenshot-zoom-link" target="_blank" href="./assets/Captura de tela de 2026-05-14 17-42-49.png">
+        <img src="./assets/Captura de tela de 2026-05-14 17-42-49.png" alt="Admin Dashboard">
+      </a>
       <div class="screenshot-label">Painel Admin — Gestão de Atividades</div>
     </div>
     <div class="screenshot-card">
-      <img src="https://raw.githubusercontent.com/lacavaalex/Projeto-EDOO/main/src/Captura%20de%20tela%20de%202026-05-14%2017-42-21.png" alt="Backend Terminal">
+      <a class="screenshot-zoom-link" target="_blank" href="./assets/Captura de tela de 2026-05-14 17-42-21.png">
+        <img src="./assets/Captura de tela de 2026-05-14 17-42-21.png" alt="Backend Terminal">
+      </a>
       <div class="screenshot-label">Backend C++ — Motor de API Crow</div>
     </div>
   </div>
@@ -167,7 +209,7 @@ description: Sistema full-stack para gerenciamento de eventos acadêmicos do Cen
       <span class="blue">┌───────────────┐</span>          <span class="green">┌──────────────────┐</span><br>
       <span class="blue">│ React Frontend│</span> ◄──REST──► <span class="green">│ C++ Crow Backend │</span><br>
       <span class="blue">└───────────────┘</span>          <span class="green">└─────────┬────────┘</span><br>
-                                           │<br>
+                                            │<br>
                                  <span class="blue">┌─────────┴────────┐</span><br>
                                  <span class="blue">│ SQLite3 Engine   │</span><br>
                                  <span class="blue">└──────────────────┘</span>
@@ -175,42 +217,57 @@ description: Sistema full-stack para gerenciamento de eventos acadêmicos do Cen
   </div>
 </div>
 
-<div class="section">
-  <h2 class="section-title">🚀 Funcionalidades</h2>
-  <div class="features-grid">
-    <div class="feature-card">
-      <span class="feature-icon">⚡</span>
-      <h3>Performance Nativa</h3>
-      <p>Backend em C++ utilizando o framework Crow para garantir respostas imediatas às requisições.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">💾</span>
-      <h3>Persistência SQLite</h3>
-      <p>Armazenamento relacional robusto para eventos, palestras e hackathons.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🔐</span>
-      <h3>Auth Flexível</h3>
-      <p>Sistema de login que aceita Nome ou E-mail, com permissões distintas de Admin/User.</p>
-    </div>
-    <div class="feature-card">
-      <span class="feature-icon">🧩</span>
-      <h3>Conceitos POO</h3>
-      <p>Uso rigoroso de Polimorfismo, Herança e Abstração (Classe Atividade).</p>
+<div class="section-dark">
+  <div class="section">
+    <h2 class="section-title">🚀 Funcionalidades Principais</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <span class="feature-icon">⚡</span>
+        <h3>Arquitetura Client-Server</h3>
+        <p>Comunicação via API REST robusta utilizando o framework Crow C++ para garantir respostas imediatas às requisições.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">💾</span>
+        <h3>Persistência de Dados</h3>
+        <p>Armazenamento relacional SQLite para o histórico de eventos combinado com persistência JSON para gerenciamento ágil de usuários.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔐</span>
+        <h3>Sistema de Autenticação</h3>
+        <p>Login flexível para usuários (aceita E-mail ou Nome) com controle de sessão seguro.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🛠️</span>
+        <h3>Modo Administrador</h3>
+        <p>Acesso restrito para criação, edição completa de todos os campos e exclusão de eventos de forma centralizada.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🎨</span>
+        <h3>Interface Web Moderna</h3>
+        <p>Desenvolvida em React com roteamento dinâmico via react-router-dom. Estética inspirada em terminais (Fonte JetBrains Mono) honrando a identidade visual do CIn/UFPE.</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔔</span>
+        <h3>Sistema de Notificações</h3>
+        <p>Pop-ups customizados (Modais e Toasts) para fornecer feedback visual instantâneo de ações do sistema (CRUD e Auth).</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">📝</span>
+        <h3>Gestão Dinâmica (CRUD)</h3>
+        <p>Edição em tempo real de atributos como título, data, vagas, horário e local diretamente nos cards da interface.</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="section-dark">
-  <div class="section">
-    <h2 class="section-title">👥 Equipe de Desenvolvimento</h2>
-    <div class="team-grid">
-      <div class="team-card"><strong>Alex Lacava</strong><span>PO & Backend</span></div>
-      <div class="team-card"><strong>Bruno Silva</strong><span>Full-Stack</span></div>
-      <div class="team-card"><strong>Maria Cláudia</strong><span>Full-Stack & Docs</span></div>
-      <div class="team-card"><strong>José Romildo</strong><span>Developer</span></div>
-      <div class="team-card"><strong>Wallyson Silva</strong><span>Backend & DBA</span></div>
-    </div>
+<div class="section">
+  <h2 class="section-title">👥 Equipe de Desenvolvimento</h2>
+  <div class="team-grid">
+    <div class="team-card"><strong>Alex Lacava</strong><span>PO & Backend</span></div>
+    <div class="team-card"><strong>Bruno Silva</strong><span>Full-Stack</span></div>
+    <div class="team-card"><strong>Maria Cláudia</strong><span>Full-Stack & Docs</span></div>
+    <div class="team-card"><strong>José Romildo</strong><span>Developer</span></div>
+    <div class="team-card"><strong>Wallyson Silva</strong><span>Backend & DBA</span></div>
   </div>
 </div>
 
